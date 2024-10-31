@@ -1,0 +1,107 @@
+@keyframes gradientAnimation {
+  0% {
+    background-color: #000; /* Starting color */
+    background-image: linear-gradient(45deg, #000000, #cec1c1);
+  }
+  50% {
+    background-color: #feb47b; /* Middle color */
+    background-image: linear-gradient(45deg, #feb47b, #ff7e5f);
+  }
+  100% {
+    background-color: #ff7e5f; /* Back to starting color */
+    background-image: linear-gradient(45deg, #ff7e5f, #feb47b);
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #d4d4d4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh; /* Ensure body takes at least full height */
+  animation: gradientAnimation 999999999s ease infinite; /* Apply gradient animation */
+  background-attachment: fixed; /* Keep background fixed */
+  background-size: cover; /* Ensure gradient covers the entire body */
+}
+
+.heading {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.heading h1 {
+  font-size: 2.5em;
+  color: #d4d4d4;
+}
+
+#search-bar {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  color: #d4d4d4;
+  font-size: 1em;
+  outline: none;
+  transition: 0.3s;
+}
+
+#search-bar:focus {
+  border-color: #555;
+  background-color: #333;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+.game-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  text-decoration: none;
+  background-color: #333;
+  color: #c8c8c8;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-container a:hover {
+  background-color: #444;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  background-color: #1e1e1e;
+  width: 100%;
+  color: #d4d4d4;
+}
+
+.footer a {
+  color: #8a8a8a;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
